@@ -1,0 +1,336 @@
+.simple-time-tracker-container {
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+.simple-time-tracker-settings-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Minimalist Timer Styling */
+.simple-time-tracker-timers {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.simple-time-tracker-timer {
+    display: flex;
+    align-items: center;
+}
+
+.simple-time-tracker-timer-time {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    color: var(--text-normal);
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+/* Control Bar Layout */
+.simple-time-tracker-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.simple-time-tracker-controls-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.simple-time-tracker-controls-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Input Styling */
+.simple-time-tracker-txt {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border: none !important;
+    border-bottom: 1px solid var(--background-modifier-border) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+.simple-time-tracker-txt:hover {
+    border: none !important;
+    border-bottom: 1px solid var(--background-modifier-border) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+.simple-time-tracker-txt:focus {
+    outline: none !important;
+    border: none !important;
+    border-bottom: 1px solid var(--background-modifier-border) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+.simple-time-tracker-txt:disabled {
+    opacity: 0.5;
+}
+
+.simple-time-tracker-txt::placeholder {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+/* Button Styling - Transparent */
+.simple-time-tracker-btn {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simple-time-tracker-btn:hover {
+    color: var(--text-accent);
+    transform: none;
+}
+
+.simple-time-tracker-btn svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.simple-time-tracker-controls-right .clickable-icon {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.simple-time-tracker-controls-right .clickable-icon:hover {
+    color: var(--text-accent);
+    transform: none;
+}
+
+.simple-time-tracker-controls-right .clickable-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Table Styling - Minimal Borders */
+.simple-time-tracker-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+.simple-time-tracker-table th {
+    padding: 0.75rem 0.5rem;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    border-bottom: 3px solid var(--text-muted);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.simple-time-tracker-table td {
+    padding: 0.75rem 0.5rem;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid var(--background-modifier-border-hover);
+}
+
+/* First column (작업 이름) should be left-aligned */
+.simple-time-tracker-table td:first-child {
+    text-align: left;
+}
+
+.simple-time-tracker-table tr:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.simple-time-tracker-table tr.simple-time-tracker-running {
+    background-color: var(--background-modifier-active-hover);
+}
+
+.simple-time-tracker-table tr.simple-time-tracker-running:hover {
+    background-color: var(--background-modifier-border);
+}
+
+.simple-time-tracker-table .clickable-icon {
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    background: transparent;
+    border: none;
+    padding: 0.25rem;
+}
+
+.simple-time-tracker-table .clickable-icon:hover {
+    opacity: 1;
+}
+
+.simple-time-tracker-expand-button {
+    margin-inline-start: 0.5em;
+}
+
+.simple-time-tracker-input {
+    max-width: 150px;
+    min-width: 100px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+}
+
+.simple-time-tracker-table-buttons {
+    text-align: center !important;
+    white-space: nowrap;
+}
+
+/* 스테이터스바 타이머 */
+.simple-time-tracker-statusbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 8px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.simple-time-tracker-statusbar:hover {
+    color: var(--text-normal);
+}
+
+.statusbar-timer-icon {
+    display: flex;
+    align-items: center;
+}
+
+.statusbar-timer-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.statusbar-timer-time {
+    font-family: var(--font-interface);
+    font-size: var(--font-ui-small);
+    font-weight: normal;
+}
+
+/* 팝업 메뉴 */
+.time-tracker-popup {
+    position: fixed;
+    z-index: 1000;
+    background: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    animation: popup-enter 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes popup-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.popup-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.popup-title {
+    font-weight: 600;
+    font-size: var(--font-ui-medium);
+    color: var(--text-normal);
+}
+
+.popup-input-container {
+    padding: 12px 16px;
+}
+
+.popup-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: var(--font-ui-small);
+}
+
+.popup-input:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+}
+
+.popup-recent-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.popup-recent-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.popup-recent-item:hover {
+    background: var(--background-modifier-hover);
+}
+
+.popup-recent-name {
+    font-size: var(--font-ui-small);
+    color: var(--text-normal);
+}
+
+.popup-empty {
+    padding: 16px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--font-ui-smaller);
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .simple-time-tracker-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .simple-time-tracker-controls-right {
+        justify-content: flex-end;
+    }
+
+    .simple-time-tracker-timer-time {
+        font-size: 1.5rem;
+    }
+}
